@@ -57,3 +57,21 @@ python app.py C:\temp\label.txt "MyBarcodePrinter"
 - The app uses the Windows printer spooler. Make sure the barcode printer is installed as a Windows printer.
 - The first time it runs, it detects the system default printer and saves it in `app.ini`.
 - Use the `Refresh printers` button if installed printers change while the app is running.
+
+## Executável
+
+Para criar um executável standalone:
+
+1. Instale PyInstaller: `pip install pyinstaller`
+2. Execute o script de build: `build.bat` (Windows CMD/PowerShell) ou `./build.sh` (Git Bash/Linux)
+3. O executável será gerado em `dist/app.exe`
+
+### Ícone Personalizado
+
+- Coloque um arquivo `icon.ico` na raiz do projeto para definir o ícone do executável e da janela da aplicação.
+- Se `icon.ico` não existir, o build será feito sem ícone (com aviso).
+
+### Uso do Executável
+
+- GUI: Clique duas vezes em `app.exe` para abrir a interface gráfica.
+- CLI: `app.exe <caminho_para_arquivo> "Nome da Impressora"`

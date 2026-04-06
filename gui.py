@@ -12,6 +12,10 @@ class PrinterApp:
         self.config = AppConfig("app.ini")
         self.logger = setup_logging(self.config.get("log_file"))
         self.root = tk.Tk()
+        try:
+            self.root.iconbitmap('icon.ico')
+        except tk.TclError:
+            pass
         self.root.title(self.config.get("app_name"))
         self._build_ui()
         self._load_printers()

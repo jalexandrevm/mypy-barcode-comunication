@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 app.log
+build/
+dist/
+icon.ico
